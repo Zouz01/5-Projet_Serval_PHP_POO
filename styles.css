@@ -1,0 +1,170 @@
+/* Définir le style pour le corps de la page */
+body {
+  font-family: calibri; /* Définir la police de base de la page */ 
+  color: white; /* Couleur du texte */   
+  overflow: hidden; /* Empêcher le défilement */ 
+  width: 100%; /* S'étendre sur toute la largeur */  
+  height: 100vh; /* Occuper toute la hauteur de l'écran */     
+  margin: 0; /* Pas de marge */           
+  padding: 0;  /* Pas de rembourrage */   
+
+/* Définir une image d'arrière-plan pour le corps de la page */  
+  background-image: url(./assets/1025035.jpg);
+
+/* Ajuste l'image d'arrière-plan pour qu'elle ait exactement la même taille que le élément body */      
+ background-size: 100% 200%;
+
+}
+
+
+/* Boussole */
+.compass {
+  width: 250px;
+  height: 250px;
+  position: relative;
+  border: 5px solid darkblue;
+  border-radius: 25px;
+  bottom: 150px;
+  margin-left:320px;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.5); /* ajout d'un fond blanc transparent */
+   text-align: center; /* centrer tous les éléments du corps */
+}
+
+
+/* Compas boussole */
+.e{
+    background-image: url(./assets/east.png);
+    background-size: contain;
+   
+    
+}
+.n{
+    background-image: url(./assets/north.png);
+    background-size: contain;
+  
+}
+.w{
+    background-image: url(./assets/west.png);
+    background-size: contain;
+   
+}
+.s{
+    background-image: url(./assets/south.png);
+    background-size:contain
+}
+
+
+/* Définir le style pour l'image de la vue à la première personne */
+.first-person-view{
+  width: 900px;
+  height: 200px;
+  border: 5px solid darkblue;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+/* Définir le style pour le conteneur des boutons de contrôle */
+#controls {
+  position: absolute;
+  bottom: 85px;
+  left: 90px;
+  width: 17%;
+}
+
+/* Définir le style pour les boutons de contrôle */
+
+
+
+form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 20 15px;
+}
+
+button {
+  border-radius: 5px;
+  font-size: 10px;
+  padding: 10px;
+  margin-right: 10px; /* ajouter une marge à droite pour séparer les boutons */
+}
+
+/* Définir le style pour le bouton "Avancer" */
+.green {
+  background-color: green;
+  color: white;
+}
+
+/* Définir le style pour le bouton "Tourner à gauche" et "Tourner à droite" */
+.blue {
+  background-color: blue;
+  color: white;
+}
+
+/* Définir le style pour le bouton "Gauche" et "Droite" */
+.yellow {
+  background-color: yellow;
+}
+
+/* Définir le style pour le texte */
+#text {
+  display: inline-block;
+  color: aliceblue;
+  padding: 30px;
+  
+  background-position: center center;
+  background-image: url(./assets/1025035.jpg);
+  margin-bottom: 80px;
+  margin-left:500px ;
+  border: 5px solid darkblue;
+  width: 40%;
+   height: 20vh; /* Occupera 30% de la hauteur de l'écran */
+  border-radius: 25px;
+  text-align: center;
+ 
+ 
+}
+
+/*Inventaire*/
+.inventaire {
+  align-items: center;
+  margin-left:50px ;
+  top :20%;
+}
+
+
+/* Appliquer un style différent pour les écrans de moins de 600px de large */
+@media screen and (max-width: 600px) {
+  body {
+    font-size: 14px;
+    height: auto; /* ajuster la hauteur automatiquement */
+  }
+  
+  /* Réduire la taille de la vue à la première personne */
+  #first-person-view {
+    width: 90%;
+    height: 150px;
+    margin-bottom: 20px;
+  }
+  
+  /* Réduire la taille des boutons de contrôle */
+  #controls button {
+    font-size: 8px;
+    padding: 5px;
+    margin-right: 5px;
+  }
+  
+  /* Réduire la taille du texte */
+  #text {
+    width: 90%;
+    padding: 10px;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: 14px;
+  }
+}
